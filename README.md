@@ -1,1 +1,1 @@
-init vatsal asn gaurav bro
+init gaurav and vatsal bro
