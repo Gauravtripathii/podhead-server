@@ -23,3 +23,13 @@ export const createUser = async (req, res) => {
     res.status(409).json({ error: error.message });
   }
 };
+
+export const getUser = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const userData = await UserData.findById(id);
+    res.status(200).json(userData);
+  } catch (error) {
+    res.status(404).json({error: error.message});
+  }
+}
