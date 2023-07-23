@@ -1,6 +1,7 @@
-import mongoose from "mongoose";
+// Step 1
+import mongoose from "mongoose"; // Importing the mongoose from mongoose module
 
-const userSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({  // creating the required schema for the any user
     name: String,
     email: String,
     age: Number,
@@ -20,5 +21,5 @@ const userSchema = mongoose.Schema({
     }
 });
 
-const UserData = mongoose.model("UserData", userSchema);
-export default UserData;
+const UserData = mongoose.model("UserData", userSchema); // store the userSchema in a constant UserData 
+export default UserData; //export newly created UserData to use anywhere inside the website.
