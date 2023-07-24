@@ -43,3 +43,15 @@ export const deleteUser = async (req, res) => {
     res.status(404).json({error : error.message});
   }
 }
+
+export const updateUser = async (req, res) => {
+  const {id} = req.params;
+  const { name, email, age, liked_podcasts, genre, listners,podcast_created, password, date_of_creation } = req.body;
+  const updatedUser = { name, email, age, liked_podcasts, genre, listners,podcast_created, password, date_of_creation, _id : id };
+  try {
+    await UserData.findByIdAndUpdate(id, updateUser, {new : true} );
+    res.status(200).json(updateUser);
+  } catch(error) {
+    res.status(404).json({error : error.message} );
+  }
+}
