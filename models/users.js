@@ -5,6 +5,7 @@ const userSchema = mongoose.Schema({  // creating the required schema for the an
     name: String,
     email: String,
     age: Number,
+    profile: String,
     liked_podcasts: [String],
     profile_photo: String,
     genre: [String],
